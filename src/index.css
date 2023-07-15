@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .btn-primary {
+        @apply px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full
+    }
+    .bg-color{
+        @apply text-white bg-gradient-to-r from-[#010d19] to-[#013d73] bg-transparent
+    }
+  }
