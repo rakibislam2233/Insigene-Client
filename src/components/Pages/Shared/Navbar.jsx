@@ -32,7 +32,7 @@ const Navbar = () => {
             className={({ isActive }) =>
               isActive ? "text-[#007EB1]" : "white"
             }
-            to="/class"
+            to="/baas"
           >
             BaaS
           </NavLink>
@@ -40,7 +40,7 @@ const Navbar = () => {
             className={({ isActive }) =>
               isActive ? "text-[#007EB1]" : "white"
             }
-            to="/program"
+            to="/decipher"
           >
             Decipher
           </NavLink>
@@ -48,7 +48,7 @@ const Navbar = () => {
             className={({ isActive }) =>
               isActive ? "text-[#007EB1]" : "white"
             }
-            to="/page"
+            to="/faq"
           >
             FAQ
           </NavLink>
