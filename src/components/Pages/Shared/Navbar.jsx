@@ -1,10 +1,12 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { FaAlignJustify } from 'react-icons/fa';
 import logo from '../../../assets/logo.png'
+import { UserContext } from "../../AuthProvider/AuthProvider";
 
 const Navbar = () => {
     const [open, setOpen] = useState(false)
+    const {user} = useContext(UserContext)
     return (
     <>
       <div className="flex justify-between items-center p-4 sm:px-8 md:px-20 py-4 shadow-xl font-semibold text-xl">
@@ -56,13 +58,23 @@ const Navbar = () => {
             className={({ isActive }) =>
               isActive ? "text-[#007EB1]" : "white"
             }
-            to="/contact"
+            to="/blogs"
           >
             Blog
           </NavLink>
+         {
+          user &&  <NavLink
+          className={({ isActive }) =>
+            isActive ? "text-[#007EB1]" : "white"
+          }
+          to="/dashboard"
+        >
+          Dashboard
+        </NavLink>
+         }
           <NavLink
             className="btn-primary"
-            to="/contact"
+            to="/"
           >
            Schedule a call
           </NavLink>

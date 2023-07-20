@@ -5,6 +5,13 @@ import AboutUs from "../components/Pages/AboutUs/AboutUs";
 import BaaS from "../components/Pages/BaaS/BaaS";
 import Decipher from "../components/Pages/Decipher/Decipher";
 import Faq from "../components/Pages/FAQ/FAQ";
+import Register from "../components/Auth/Register";
+import Login from "../components/Auth/Login";
+import Blogs from "../components/Pages/Blogs/Blogs";
+import AddBlogs from "../layouts/Dashboard/Admin/AddBlogs/AddBlogs";
+import Dashboard from "../layouts/Dashboard/Dashboard";
+import Admin from "../layouts/Dashboard/Admin/Admin";
+import ManagBlogs from "../layouts/Dashboard/Admin/ManagBlogs/ManagBlogs";
 
 const router = createBrowserRouter([
   {
@@ -32,8 +39,39 @@ const router = createBrowserRouter([
         path: "/faq",
         element: <Faq></Faq>,
       },
+      {
+        path:'/blogs',
+        element:<Blogs></Blogs>
+      }
     ],
   },
+  {
+    path:'/register',
+    element:<Register></Register>
+  },
+  {
+    path:'/login',
+    element:<Login></Login>
+  },
+  {
+    path:'/dashboard',
+    element:<Dashboard></Dashboard>,
+    children:[
+      {
+        path:'/dashboard',
+        element:<Admin></Admin>
+      },
+      {
+        path:'/dashboard/addBlogs',
+        element:<AddBlogs></AddBlogs>
+      }
+      ,
+      {
+        path:'managBlogs',
+        element:<ManagBlogs/>
+      }
+    ]
+  }
 ]);
 
 export default router;

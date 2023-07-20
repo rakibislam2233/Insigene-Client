@@ -6,7 +6,7 @@ import Footer from "../components/Pages/Shared/Footer";
 
 const Main = () => {
     return (
-        <div className="w-full h-screen bg-color">
+        <div className="w-full h-full bg-color">
             <Navbar></Navbar>
             <Outlet></Outlet>
             <Footer></Footer>

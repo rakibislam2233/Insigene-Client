@@ -637,7 +637,7 @@ const ParticleBg2 = () => {
                 }
               ]
             }}
-        />
+            />
         </div>
     );
 };

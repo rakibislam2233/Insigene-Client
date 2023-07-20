@@ -3,8 +3,8 @@ import PricingCard from "./PricingCard";
 
 const BaaS = () => {
   return (
-    <div className="bg-color">
-      <div className="mx-44">
+    <div className="bg-color p-5">
+      <div className="w-full max-w-5xl mx-auto">
         <h2 className="mt-12 mb-4 text-3xl font-semibold">
           Get access to a whole team for a fraction of the cost hiring one
           person!
