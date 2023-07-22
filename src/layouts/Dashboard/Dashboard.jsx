@@ -47,7 +47,7 @@ const Dashboard = () => {
           </ul>
         </nav>
       </div>
-      <div className="w-full   lg:ml-[18%] p-5 bg-color ">
+      <div className="w-full lg:ml-[18%] p-5">
         <Outlet></Outlet>
       </div>
       <ParticleBg2></ParticleBg2>

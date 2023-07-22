@@ -1,17 +1,17 @@
 import { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { FaAlignJustify } from 'react-icons/fa';
-import logo from '../../../assets/logo.png'
+import { FaAlignJustify } from "react-icons/fa";
+import logo from "../../../assets/logo.png";
 import { UserContext } from "../../AuthProvider/AuthProvider";
 
 const Navbar = () => {
-    const [open, setOpen] = useState(false)
-    const {user} = useContext(UserContext)
-    return (
+  const [open, setOpen] = useState(false);
+  const { user } = useContext(UserContext);
+  return (
     <>
-      <div className="flex justify-between items-center p-4 sm:px-8 md:px-20 py-4 shadow-xl font-semibold text-xl">
+      <div className="flex justify-between items-center px-5 md:px-10 py-5 shadow-xl font-semibold text-xl">
         <Link to="/">
-            <img className="w-52" src={logo} alt="" />
+          <img className="w-60" src={logo} alt="" />
         </Link>
         <nav className="space-x-8 hidden md:block">
           <NavLink
@@ -62,103 +62,101 @@ const Navbar = () => {
           >
             Blog
           </NavLink>
-         {
-          user &&  <NavLink
-          className={({ isActive }) =>
-            isActive ? "text-[#007EB1]" : "white"
-          }
-          to="/dashboard"
-        >
-          Dashboard
-        </NavLink>
-         }
-          <NavLink
-            className="btn-primary"
-            to="/"
-          >
-           Schedule a call
+          {user && (
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? "text-[#007EB1]" : "white"
+              }
+              to="/dashboard"
+            >
+              Dashboard
+            </NavLink>
+          )}
+          <NavLink className="btn-primary" to="/">
+            Schedule a call
           </NavLink>
         </nav>
-        
+
         <button className="md:hidden" onClick={() => setOpen(!open)}>
-          <FaAlignJustify className="h-6 w-6 text-primary"></FaAlignJustify>
+          <FaAlignJustify className="w-8 h-8 text-white"></FaAlignJustify>
         </button>
       </div>
       <div className="md:hidden">
         {open && (
-          <nav className="shadow-xl p-4">
+          <nav className="shadow-xl px-8 py-4">
             <div className="flex flex-col gap-2">
               <NavLink
                 className={({ isActive }) =>
-                  isActive
-                    ? "text-white bg-primary px-2 rounded "
-                    : "hover:bg-primary px-2 rounded hover:text-white"
+                  isActive ? "text-[#007EB1]" : "white"
                 }
                 to="/"
+                onClick={()=>setOpen(false)}
               >
                 Home
               </NavLink>
               <NavLink
                 className={({ isActive }) =>
-                  isActive
-                    ? "text-white bg-primary px-2 rounded"
-                    : "hover:bg-primary px-2 rounded hover:text-white"
+                  isActive ? "text-[#007EB1]" : "white"
                 }
-                to="/about"
+                to="/aboutUs"
+                onClick={()=>setOpen(false)}
               >
-                About
+                About Us
               </NavLink>
               <NavLink
                 className={({ isActive }) =>
-                  isActive
-                    ? "text-white bg-primary px-2 rounded"
-                    : "hover:bg-primary px-2 rounded hover:text-white"
+                  isActive ? "text-[#007EB1]" : "white"
                 }
-                to="/class"
+                to="/baas"
+                onClick={()=>setOpen(false)}
               >
-                Classes
+                BaaS
               </NavLink>
               <NavLink
                 className={({ isActive }) =>
-                  isActive
-                    ? "text-white bg-primary px-2 rounded"
-                    : "hover:bg-primary px-2 rounded hover:text-white"
+                  isActive ? "text-[#007EB1]" : "white"
                 }
-                to="/program"
+                to="/decipher"
+                onClick={()=>setOpen(false)}
               >
-                Programs
+                Decipher
               </NavLink>
               <NavLink
                 className={({ isActive }) =>
-                  isActive
-                    ? "text-white bg-primary px-2 rounded"
-                    : "hover:bg-primary px-2 rounded hover:text-white"
+                  isActive ? "text-[#007EB1]" : "white"
                 }
-                to="/page"
+                to="/faq"
+                onClick={()=>setOpen(false)}
               >
-                Pages
+                FAQ
               </NavLink>
               <NavLink
                 className={({ isActive }) =>
-                  isActive
-                    ? "text-white bg-primary px-2 rounded"
-                    : "hover:bg-primary px-2 rounded hover:text-white"
+                  isActive ? "text-[#007EB1]" : "white"
                 }
-                to="/contact"
+                to="/blogs"
+                onClick={()=>setOpen(false)}
               >
-                Contact Us
+                Blog
               </NavLink>
-            </div>
-            <div className="mt-2">
-              <Link className=" px-3 py-2 bg-primary rounded text-white">
-                APPOINTMENT
-              </Link>
+              {user && (
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? "text-[#007EB1]" : "white"
+                  }
+                  to="/dashboard"
+                  onClick={()=>setOpen(false)}
+                >
+                  Dashboard
+                </NavLink>
+              )}
+              <button className="btn-primary">Schedule a call</button>
             </div>
           </nav>
         )}
       </div>
     </>
-    );
+  );
 };
 
 export default Navbar;

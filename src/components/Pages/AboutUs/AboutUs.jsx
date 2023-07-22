@@ -2,8 +2,8 @@
 
 const AboutUs = () => {
     return (
-        <div className="w-full max-w-5xl mx-auto h-full p-5">
-        <h2 className="mt-12 text-5xl font-bold">Our story</h2>
+        <div className="w-full max-w-6xl mx-auto h-full p-5">
+        <h2 className="mt-10 text-5xl font-bold">Our story</h2>
         <div className="mb-8 md:flex justify-between items-center gap-5">
             <div className="w-full md:w-[60%]">
                 <p className="mt-8 text-xl">After working in academia for many years, Anthony Bosco, Denise Anderson, Edgar Basto, and James Read were interested in combining the exciting discovery research performed in academia with a more agile, focused, and flexible way of working that is provided by a startup company. They approached Nick Bosco with a proposal to build a company that was designed by researchers to provide support for other researchers. </p>

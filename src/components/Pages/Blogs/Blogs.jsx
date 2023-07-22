@@ -4,15 +4,15 @@ import { useEffect, useState } from "react";
 const Blogs = () => {
   const [blogs, setBlogs] = useState([]);
   useEffect(() => {
-    axios.get(`http://localhost:5000/getBlogs`).then((res) => {
+    axios.get(`https://insigene-server-side.vercel.app/getBlogs`).then((res) => {
       console.log(res.data);
       setBlogs(res.data);
     });
   }, []);
   return (
-    <div className="w-full h-full pb-52 pt-10 bg-color p-5">
-      <div className="w-full max-w-5xl mx-auto">
-      <h2 className="text-2xl font-semibold">Blogs</h2>
+    <div className="w-full h-full pb-36 pt-10 bg-color p-5">
+      <div className="w-full max-w-6xl mx-auto">
+      <h2 className="text-2xl font-bold pb-8">Blogs</h2>
         <div className=" grid grid-cols-1 md:grid-cols-3 gap-10 py-5">
           {blogs.map((blog) => (
             <>

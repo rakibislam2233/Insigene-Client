@@ -1,7 +1,7 @@
 const Decipher = () => {
     return (
         <div className="bg-color py-5"> 
-            <div className="w-full max-w-5xl mx-auto py-8 p-5">
+            <div className="w-full max-w-6xl mx-auto py-8 p-5">
             <div className="space-y-3 text-xl">
                 <h2 className="text-4xl font-semibold pb-10">Decipher is coming in 2024!</h2>
                 <p>Decipher identifies novel therapeutic targets from human or mouse single cell mRNA expression data. Bulk mRNA expression data can be used to strengthen the analysis.</p>

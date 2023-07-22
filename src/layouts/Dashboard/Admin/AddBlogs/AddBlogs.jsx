@@ -31,7 +31,7 @@ const AddBlogs = () => {
       };
       axios
         .post(
-          `http://localhost:5000/addBlogs`,
+          `https://insigene-server-side.vercel.app/addBlogs`,
           blogData
         )
         .then((res) => {
@@ -49,8 +49,9 @@ const AddBlogs = () => {
     });
   };
   return (
-    <div className="w-full h-full md:h-screen md:w-[75%] mx-auto ">
+    <div className="w-full h-full  md:w-[75%] mx-auto ">
       <h2 className="text-center text-3xl font-semibold py-2">Add Blog</h2>
+      <div className="w-full h-[86vh]">
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="w-full border px-8 py-3 rounded-2xl"
@@ -85,8 +86,8 @@ const AddBlogs = () => {
           )}
         </div>
         <div className="form-control py-3">
-          <label htmlFor="files" className="label border py-3 rounded-lg border-dashed border-rose-500 flex justify-center text-lg gap-2">
-           <AiOutlinePlus className="w-6 h-6 text-rose-500"></AiOutlinePlus> Upload Image 
+          <label htmlFor="files" className="label  border-2 py-3 rounded-lg border-dashed border-cyan-500 flex justify-center text-lg gap-2 cursor-pointer">
+           <AiOutlinePlus className="w-6 h-6 text-rose-500 cursor-pointer"></AiOutlinePlus> Upload Image 
           </label>
           <input
             type="file"
@@ -103,6 +104,7 @@ const AddBlogs = () => {
           <button className="btn-primary text-lg">Continue</button>
         </div>
       </form>
+      </div>
     </div>
   );
 };

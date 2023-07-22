@@ -6,9 +6,11 @@ import { UserContext } from "../../../components/AuthProvider/AuthProvider";
 const Admin = () => {
   const {user} = useContext(UserContext)
     return (
-        <div className="w-full">
+        <div className="w-full h-[90vh]">
           <h2 className="text-3xl font-semibold">Welcome {user.displayName} </h2>
-          <Lottie className="w-full" animationData={groovyWalkAnimation} loop={true} />
+          <div className="flex justify-center items-center">
+          <Lottie className="w-[50%]" animationData={groovyWalkAnimation} loop={true} />
+          </div>
         </div>
     );
 };
