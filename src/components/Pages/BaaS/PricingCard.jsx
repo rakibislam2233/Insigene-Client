@@ -2,8 +2,8 @@ const PricingCard = () => {
     return (
         <>
             <section className="pb-10 text-white sm:pb-16 lg:pb-24">
-            <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-              <div className="grid max-w-3xl grid-cols-1 gap-6 mx-auto sm:grid-cols-2 mt-14 md:gap-9">
+            <div className="px-4 max-w-6xl mx-auto  sm:px-6 lg:px-8">
+              <div className="grid max-w-3xl grid-cols-1 gap-6  mx-auto sm:grid-cols-2 mt-14 md:gap-9">
                 <div className="overflow-hidden bg-transparent border-2 border-gray-200 rounded-md">
                   <div className="p-6 md:py-8 md:px-9">
                     <h3 className="text-xl font-semibold ">Baas-Pro</h3>

@@ -1,6 +1,11 @@
+import { Helmet } from "react-helmet";
+
 const Faq = () => {
   return (
-    <div className="w-full max-w-6xl mx-auto my-52">
+    <div className="w-full  max-w-6xl mx-auto my-52">
+      <Helmet>
+        <title>FAQ - INSiGENe</title>
+      </Helmet>
       <div className="collapse collapse-plus ">
         <input type="radio" name="my-accordion-3" checked="checked" />
         <div className="collapse-title text-xl font-medium">

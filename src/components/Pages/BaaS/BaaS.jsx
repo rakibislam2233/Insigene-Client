@@ -1,10 +1,14 @@
 import { Link } from "react-router-dom";
 import PricingCard from "./PricingCard";
+import { Helmet } from "react-helmet";
 
 const BaaS = () => {
   return (
     <div className="bg-color p-5">
-      <div className="w-full max-w-6xl mx-auto">
+       <Helmet>
+        <title>BaaS - INSiGENe</title>
+      </Helmet>
+      <div className="w-full  max-w-6xl mx-auto">
         <h2 className="mt-12 mb-4 text-3xl font-semibold">
           Get access to a whole team for a fraction of the cost hiring one
           person!

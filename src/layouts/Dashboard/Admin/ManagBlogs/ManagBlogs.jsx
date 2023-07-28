@@ -7,7 +7,6 @@ const ManagBlogs = () => {
   const [blogs, setBlogs] = useState([]);
   useEffect(() => {
     axios.get(`https://insigene-server-side.vercel.app/getBlogs`).then((res) => {
-      console.log(res.data);
       setBlogs(res.data);
     });
   }, []);
@@ -31,7 +30,7 @@ const ManagBlogs = () => {
           setBlogs(remaining);
         })
         .catch(err =>{
-          console.log(err);
+         toast.error(err.message);
         })
       }
     })
@@ -40,7 +39,7 @@ const ManagBlogs = () => {
   return (
    <>
    {
-    blogs.length == 0 ? <div className="w-full h-[90vh] flex justify-center items-center text-xl">No Data Available</div> :  <div className="w-full h-full">
+    blogs?.length == 0 ? <div className="w-full h-[90vh] flex justify-center items-center text-xl">No Data Available</div> :  <div className="w-full h-full">
     <h2 className="text-xl font-semibold text-center">Manag Blogs</h2>
     <div className="w-full full">
     <div className="overflow-x-auto">
@@ -55,7 +54,7 @@ const ManagBlogs = () => {
           </tr>
         </thead>
         <tbody className="text-lg">
-          {blogs.map((blog) => (
+          {blogs?.map((blog) => (
             <>
               <tr>
                 <td>

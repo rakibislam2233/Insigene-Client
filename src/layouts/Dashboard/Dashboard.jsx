@@ -1,9 +1,10 @@
-import { AiOutlineHome, AiOutlineUserAdd } from "react-icons/ai";
-import { BiImageAdd } from "react-icons/bi";
+import { AiOutlineHome,} from "react-icons/ai";
+import {BiSolidAddToQueue } from "react-icons/bi";
 
 import { Link, Outlet } from "react-router-dom";
 import ParticleBg2 from "../../components/Particle/ParticleBg2";
 import { Toaster } from "react-hot-toast";
+import { FaBlogger } from "react-icons/fa";
 
 const Dashboard = () => {
   return (
@@ -24,7 +25,7 @@ const Dashboard = () => {
                 to="/dashboard/addBlogs"
                 className="flex gap-2 items-center  cursor-pointer"
               >
-                <BiImageAdd className="w-5 h-5"></BiImageAdd>Add Blogs
+                <BiSolidAddToQueue className="w-5 h-5"></BiSolidAddToQueue>Add Blogs
               </Link>
             </li>
             <li>
@@ -32,7 +33,7 @@ const Dashboard = () => {
                 to="/dashboard/managBlogs"
                 className="flex gap-2 items-center  cursor-pointer"
               >
-                <AiOutlineUserAdd className="w-5 h-5"></AiOutlineUserAdd>Manage
+                <FaBlogger className="w-5 h-5"></FaBlogger>Manage
                 Blogs
               </Link>
             </li>

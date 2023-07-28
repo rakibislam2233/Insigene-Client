@@ -13,7 +13,6 @@ const AddBlogs = () => {
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => {
-    console.log(data);
     const image = data.photo[0];
     const formData = new FormData();
     formData.append("image", image);
@@ -49,7 +48,7 @@ const AddBlogs = () => {
     });
   };
   return (
-    <div className="w-full h-full  md:w-[75%] mx-auto ">
+    <div className="w-full h-full  md:w-[75%] max-w-6xl mx-auto ">
       <h2 className="text-center text-3xl font-semibold py-2">Add Blog</h2>
       <div className="w-full h-[86vh]">
       <form
