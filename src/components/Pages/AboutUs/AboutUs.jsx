@@ -1,12 +1,14 @@
 import { Helmet } from "react-helmet";
+import Experts from "./Experts";
 
 const AboutUs = () => {
   return (
-    <div className="w-full  max-w-6xl mx-auto h-full p-5">
+    <div className="w-full  h-full">
       <Helmet>
         <title>About Us - INSiGENe</title>
       </Helmet>
-      <h2 className="mt-10 text-5xl font-bold">Our story</h2>
+      <div className="max-w-6xl mx-auto pb-20">
+      <h2 className="mt-10 text-4xl font-bold">Our story</h2>
       <div className="mb-8 md:flex justify-between items-center gap-5">
         <div className="w-full md:w-[60%]">
           <p className="mt-8 text-xl">
@@ -37,6 +39,11 @@ const AboutUs = () => {
           />
         </div>
       </div>
+     
+      </div>
+      <div className="bg-gradient-to-r from-[#010D19] to-[#002D56]">
+        <Experts></Experts>
+       </div>
     </div>
   );
 };
