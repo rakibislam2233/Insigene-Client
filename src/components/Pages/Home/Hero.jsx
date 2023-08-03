@@ -43,7 +43,7 @@ const Hero = () => {
             </div>
             <div className="w-full md:w-[50%]">
               <img
-                className="w-full"
+                className="w-full "
                 src="https://i.postimg.cc/RZ49MfpC/Insigene-Circle-Slider1.png"
                 alt=""
               />
